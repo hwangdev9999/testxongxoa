@@ -1,7 +1,12 @@
 import { Elysia } from "elysia";
 
-const app = new Elysia().get("/", () => "Hello Elysia V2").listen(9043);
+const app = new Elysia()
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+app.get("/check", async ctx => {
+  return "Hello world"
+})
+
+app.listen({
+  port: 9043,
+  reusePort: false
+}, () => console.log("Service is running on port 9043"))
