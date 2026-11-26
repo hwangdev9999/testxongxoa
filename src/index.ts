@@ -2,8 +2,9 @@ import { Elysia } from "elysia";
 
 const app = new Elysia()
 
+// CI CD worked
 app.get("/check", async ctx => {
-  return "Hello world"
+  return "Deploy test nha"
 })
 
 app.listen({
