@@ -4,7 +4,7 @@ const app = new Elysia()
 
 // CI CD worked
 app.get("/check", async ctx => {
-  return "Deploy test nha 111"
+  return "Deploy test nha 222"
 })
 
 app.listen({
